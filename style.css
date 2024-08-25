@@ -16,7 +16,7 @@ body{
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-size: auto 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     transition: 0.1s;
@@ -37,7 +37,7 @@ body{
     background-image: url('img/4.png');
 }
 .banner .bg-6{
-    background-image: url('img/5.png');
+    background-image: url('img/.png');
 }
 .banner .bg-7{
     background-image: url('img/6.png');
@@ -50,12 +50,12 @@ body{
 }
 .banner  h1{
     position: absolute;
-    top: -35vh;
+    top: -25vh;
     padding-top:10vh;
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 10rem;
+    font-size: 6rem;
     font-family: 'Pacifico', cursive;
     color: #fff;
 }
@@ -76,15 +76,25 @@ body{
     width: 700px;
     max-width: 100%;
     text-align: center;
+    font-size: 1rem;
 }
 .intro button{
-    background-color: #FD0003;
+    margin-top:10px;
+    margin-botom: 10px;
+    background-color: #5d1718;
     padding: 10px 50px;
-    border: 1px solid #591F1D;
+    border: 3px solid #ffffff;
     border-radius: 5px;
     color: #fff;
     font-family: Poppins;
     font-weight: 500;
+    font-size:1rem;
+    cursor:pointer;
+    box-shadow: 0 0 10px #ff0000;
+}
+.intro button:hover {
+    background-color: rgba(238, 86, 86, 0.78); /* Slightly darker on hover */
+    box-shadow: 0 0 10px #ff0000;
 }
 .animation-show{
     transform: translateY(50px);
@@ -104,22 +114,26 @@ body{
 .animation-show:nth-child(4){
     transition-delay: 0.9s;
 }
-.library{
+.library {
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Add some space between the videos */
     text-align: center;
     color: #fff;
+    margin-left:10px;
+    margin-right:10px;
 }
-.library img{
-    width: 90%;
-    height: 500px;
-    object-fit: cover;
+
+.library iframe {
+    width: 100%; /* Make the video take the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* Ensure the videos keep their 16:9 aspect ratio */
 }
 @media screen and (max-width: 768px){
     .banner h1{
-        font-size: 5rem;
-        top: -10vh;
+        font-size: 2rem;
+        top: -5vh;
     }
     .library{
         grid-template-columns: repeat(2, 1fr);
