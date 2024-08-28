@@ -1,217 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-body{
-    margin :0;
-    background-color: #210002;
-    font-family: Poppins;
-    font-size: 15px;
-}
-header {
-    background-color: #210002;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header .logo {
-    width: 30px;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-header nav {
-    flex: 1;
+body {
+    font-family: "Bungee Hairline", system-ui;
+    font-weight: 900;
+    font-style: normal;
+    color: #ffffff;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+    overflow: hidden; /* Prevent scrolling */
 }
 
-header nav:first-child {
-    justify-content: flex-start;
-}
-
-header nav:last-child {
-    justify-content: flex-end;
-}
-
-header nav a {
-    color: #fff;
-    margin: 0 80%;
-    text-decoration: none;
-    font-family: Poppins;
-    font-weight: 500;
-}
-
-header nav a:hover {
-    color: #ff0000;
-}
-footer {
-    background-color: #210002;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 0.9rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-.banner{
-    height: 110vh;
-    position: relative;
-    overflow: hidden;
-}
-.banner .bg{
+#background-video {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: 0.1s;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background-color: #000; /* Fallback background color */
 }
-.banner .bg-1{
-    background-image: url('img/0.png');
-}
-.banner .bg-2{
-    background-image: url('img/1.png');
-}
-.banner .bg-3{
-    background-image: url('img/2.png');
-}
-.banner .bg-4{
-    background-image: url('img/3.png');
-}
-.banner .bg-5{
-    background-image: url('img/4.png');
-}
-.banner .bg-6{
-    background-image: url('img/.png');
-}
-.banner .bg-7{
-    background-image: url('img/6.png');
-}
-.banner .bg-8{
-    background-image: url('img/7.png');
-}
-.banner .bg-9{
-    background-image: url('img/.png');
-}
-.banner  h1{
-    position: absolute;
-    top: -25vh;
-    padding-top:20vh;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 5rem;
-    font-family: 'Pacifico', cursive;
-    color: #fff;
-}
-.intro{
-    min-height: 50vh;
-    color: #eee;
+
+.container {
+    z-index: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.intro img{
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-}
-.intro p{
-    width: 700px;
-    max-width: 100%;
-    text-align: center;
-    font-size: 1rem;
-}
-.intro button{
-    margin-top:10px;
-    margin-botom: 10px;
-    background-color: rgba(93, 23, 24, 0.47);
-    padding: 10px 50px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    color: #fff;
-    font-family: Poppins;
-    font-weight: 500;
-    font-size:1rem;
-    cursor:pointer;
-    box-shadow: 0 0 10px #ff0000;
-}
-.intro button:hover {
-    background-color: rgba(238, 86, 86, 0.78); /* Slightly darker on hover */
-    box-shadow: 0 0 10px #ff0000;
-}
-.animation-show{
-    transform: translateY(50px);
-    opacity: 0;
-    transition: 0.7s;
-}
-.active .animation-show{
-    transform: translateY(0);
-    opacity: 1;
-}
-.animation-show:nth-child(2){
-    transition-delay: 0.3s;
-}
-.animation-show:nth-child(3){
-    transition-delay: 0.6s;
-}
-.animation-show:nth-child(4){
-    transition-delay: 0.9s;
-}
-.library {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px; /* Add some space between the videos */
-    text-align: center;
-    color: #fff;
-    margin-left:10px;
-    margin-right:10px;
-}
-
-.library iframe {
-    width: 100%; /* Make the video take the full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 560px;
-    aspect-ratio: 16 / 9; /* Ensure the videos keep their 16:9 aspect ratio */
-}
-
-.about {
-    padding: 50px;
-    color: #eee;
+    width: 100%;
+    height: 100%;
     text-align: center;
 }
 
-.about h2 {
+.box {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ffffff;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.about p {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+#countdown {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
-@media screen and (max-width: 768px){
-    .banner h1{
-        font-size: 2rem;
-        top: -5vh;
+
+.number {
+    color: #ffffff;
+}
+
+.label {
+    color: #b0b0b0;
+}
+
+#time-left {
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
     }
-    .library{
-        grid-template-columns: repeat(2, 1fr);
+
+    #countdown {
+        font-size: 2.5rem;
     }
-    .library img{
-        height: 300px;
+
+    #time-left {
+        font-size: 1.5rem;
     }
 }
