@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-const targetDate = new Date("September 16, 2080 16:00:00").getTime();
+const targetDate = new Date("September 16, 2024 16:00:00").getTime();
 
 // Update the countdown every 1 second
 const countdownInterval = setInterval(function() {
@@ -27,7 +27,7 @@ const countdownInterval = setInterval(function() {
     if (timeLeft < 0) {
         clearInterval(countdownInterval);
         document.getElementById("countdown-title").innerHTML = "Congratulations mofaka! You did it! I'm soooo proud of you ❤️";
-        document.getElementById("countdown").innerHTML = "";
-        document.getElementById("time-left").innerHTML = "";
+        document.getElementById("countdown").innerHTML = "Congratulations mofaka! You did it! I'm soooo proud of you ❤️";
+        document.getElementById("time-left").innerHTML = "Congratulations mofaka! You did it! I'm soooo proud of you ❤️";
     }
 }, 1000);
